@@ -11,11 +11,11 @@ export const Global = createGlobalStyle`
   }
   body {
     background-color: ${colors.white};
-    width:100%;
+    width: 100%;
     overflow-x: hidden;
   }
   html {
-    width:100%;
+    width: 100%;
     scroll-behavior:smooth;
 
     @media (max-width: 1340px) {

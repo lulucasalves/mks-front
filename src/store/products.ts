@@ -8,10 +8,10 @@ const productSlice = createSlice({
       {
         id: '1',
         name: 'Educação Fisica',
-        brand: 'Apple',
         description: 'aguardando',
-        price: 200,
-        quantity: 1
+        price: 0,
+        quantity: 1,
+        photo: ''
       }
     ]
   },

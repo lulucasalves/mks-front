@@ -3170,11 +3170,6 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-icons@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
-  integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
-
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -3184,6 +3179,11 @@ react-is@^18.0.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+
+react-outclick@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-outclick/-/react-outclick-0.0.4.tgz#54a6ea12bcedebe0c793672337fc032e29381f1f"
+  integrity sha512-OL5s4sGWvC6ZwqfzsXfpn2axMyURe7cKX0qlCPHrun3O/x5dOTf7ATIyNuhB9LbK11m3yMFrjIGPx+oRb12Ijw==
 
 react-redux@^8.0.2:
   version "8.0.2"
