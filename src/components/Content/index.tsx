@@ -37,6 +37,7 @@ export function Content() {
 
             return (
               <Card
+              key={val.id}
                 price={val.price}
                 description={val.description}
                 title={val.name}

@@ -39,6 +39,7 @@ export function Sidebar({ sidebar, setSidebar }: any) {
                 {products.slice(1, 9).map((val: any) => {
                   return (
                     <CartCard
+                      key={val.id}
                       description={val.description}
                       image={val.photo}
                       title={val.name}
