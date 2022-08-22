@@ -25,7 +25,7 @@ export function Sidebar({ sidebar, setSidebar }: any) {
     <>
       {state && (
         <OnOutsiceClick onOutsideClick={() => setSidebar(false)}>
-          <Container>
+          <Container >
             <Content>
               <Top>
                 <h2>

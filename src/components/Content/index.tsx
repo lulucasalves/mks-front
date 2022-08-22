@@ -27,7 +27,7 @@ export function Content() {
   }, [])
 
   return (
-    <Container>
+    <Container data-testid="content">
       {loading ? (
         <p>Buscando Produtos...</p>
       ) : (

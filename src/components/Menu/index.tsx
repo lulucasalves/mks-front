@@ -4,7 +4,7 @@ import { Container } from './styles'
 
 export function Menu({ setSidebar }: any) {
   return (
-    <Container>
+    <Container data-testid="menu">
       <Logo />
       <Cart onClick={() => setSidebar(true)} />
     </Container>
