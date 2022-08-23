@@ -1,4 +1,6 @@
 # MKS - Desafio Front-End
+<image src="https://github.com/lulucasalves/mks-front/blob/main/.github/image-1.png?raw=true" />
+
 Diretrizes do desafio
 ===========================
 
