@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { editProduct, excludeProduct } from '../../store/products'
+import { IApiProducts } from '../../types'
 import { CartDiv, Delete, Price, PriceDiv, Product, Quantity } from './styles'
 
 export function CartCard({
@@ -9,7 +10,7 @@ export function CartCard({
   id,
   quantity,
   description
-}: any) {
+}: IApiProducts) {
   const dispatch = useDispatch()
 
   function addItem() {

@@ -8,7 +8,7 @@ export function getProducts() {
         .then((res: any) => {
           const data = res.data
           if (res.status === 200 || res.status === 201) {
-            resolve(data)
+            resolve(data.products)
           } else {
             reject(data.message)
           }

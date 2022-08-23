@@ -1,15 +1,17 @@
-import { IProductStore } from '../types'
+import { IProductStore, IStore } from '../types'
 import { createSlice } from '@reduxjs/toolkit'
+
+
 
 const productSlice = createSlice({
   name: 'products',
   initialState: {
     products: [
       {
-        id: '1',
+        id: 0,
         name: 'Educação Fisica',
         description: 'aguardando',
-        price: 0,
+        price: '0',
         quantity: 1,
         photo: ''
       }
@@ -19,11 +21,11 @@ const productSlice = createSlice({
     createProduct: (state, action) => {
       state.products.push(action.payload)
     },
-    editProduct: (state: any, action) => {
+    editProduct: (state: IStore, action) => {
       let nullArray = [] as Array<IProductStore>
       const payl = action.payload
 
-      state.products.map((val: any) => {
+      state.products.map((val: IProductStore) => {
         if (val.id === payl.id) {
           val = payl
         }
@@ -33,11 +35,11 @@ const productSlice = createSlice({
 
       state.products = nullArray
     },
-    excludeProduct: (state: any, action) => {
+    excludeProduct: (state: IStore, action) => {
       let nullArray = [] as Array<IProductStore>
       const payl = action.payload
 
-      state.products.map((val: any) => {
+      state.products.map((val: IProductStore) => {
         if (val.id !== payl) {
           nullArray.push(val)
         }

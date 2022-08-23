@@ -1,9 +1,32 @@
 export interface IProductStore {
-  id: string
+  id: number
   name: string
-  brand: string
+  brand?: string
   description: string
-  price: number
-  quantity?: number
+  price: string
+  quantity: number
   photo: string
 }
+
+export interface IStore {
+  products: Array<IProductStore>
+}
+
+export interface IApiProducts {
+  id: number
+  title: string
+  description: string
+  price: string
+  quantity: number
+  image: string
+}
+
+export interface IClick {
+  onClick: (event: boolean) => void
+}
+
+export interface ISideBar {
+  setSidebar: (val: boolean) => void
+  sidebar?: boolean
+}
+

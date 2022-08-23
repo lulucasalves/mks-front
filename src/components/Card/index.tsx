@@ -2,14 +2,14 @@ import Image from 'next/image'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button, CartDiv, Description, Product, TitlePrice } from './styles'
 import { createProduct, editProduct } from '../../store/products'
+import { IApiProducts, IProductStore } from '../../types'
+import { IRootState } from '../../store'
 
-export function Card({ image, title, description, price, id }: any) {
+export function Card({ image, title, description, price, id }: IApiProducts) {
   const dispatch = useDispatch()
-  const { products } = useSelector((auth: any) => auth.products)
+  const { products } = useSelector((auth: IRootState) => auth.products)
 
-  console.log(products)
-
-  function filterProducts(val: any) {
+  function filterProducts(val: IProductStore) {
     return val.id === id
   }
 

@@ -3,19 +3,22 @@ import OnOutsiceClick from 'react-outclick'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { CartCard } from '../CartCard'
+import { IProductStore, ISideBar } from '../../types'
+import { IRootState } from '../../store'
 
-export function Sidebar({ sidebar, setSidebar }: any) {
+export function Sidebar({ sidebar, setSidebar }: ISideBar) {
   // Modo de criar delay para não abrir e fechar menu ao msm tempo
-  const [state, setState] = useState(false)
-  useEffect(() => setState(sidebar), [sidebar])
 
-  const { products } = useSelector((auth: any) => auth.products)
+  const [state, setState] = useState(false)
+  useEffect(() => setState(sidebar || false), [sidebar])
+
+  const { products } = useSelector((auth: IRootState) => auth.products)
 
   function totalValue() {
     let final = 0
 
-    products.map((val: any) => {
-      final += val.quantity * val.price
+    products.map((val: IProductStore) => {
+      final += val.quantity * parseInt(val.price)
     })
 
     return final
@@ -25,7 +28,7 @@ export function Sidebar({ sidebar, setSidebar }: any) {
     <>
       {state && (
         <OnOutsiceClick onOutsideClick={() => setSidebar(false)}>
-          <Container >
+          <Container>
             <Content>
               <Top>
                 <h2>
@@ -36,7 +39,7 @@ export function Sidebar({ sidebar, setSidebar }: any) {
                 <p onClick={() => setSidebar(false)}>X</p>
               </Top>
               <Cards>
-                {products.slice(1, 9).map((val: any) => {
+                {products.slice(1, 9).map((val: IProductStore) => {
                   return (
                     <CartCard
                       key={val.id}
