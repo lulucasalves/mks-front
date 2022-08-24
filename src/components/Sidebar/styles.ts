@@ -71,6 +71,10 @@ export const Cards = styled.div`
   height: 647px;
   overflow-y: scroll;
 
+  .null {
+    color: ${colors.white};
+  }
+
   @media (max-width: 981px) {
     height: 450px;
   }

@@ -39,19 +39,23 @@ export function Sidebar({ sidebar, setSidebar }: ISideBar) {
                 <p onClick={() => setSidebar(false)}>X</p>
               </Top>
               <Cards>
-                {products.slice(1, 9).map((val: IProductStore) => {
-                  return (
-                    <CartCard
-                      key={val.id}
-                      description={val.description}
-                      image={val.photo}
-                      title={val.name}
-                      price={val.price}
-                      id={val.id}
-                      quantity={val.quantity}
-                    />
-                  )
-                })}
+                {products.length > 1 ? (
+                  products.slice(1, 9).map((val: IProductStore) => {
+                    return (
+                      <CartCard
+                        key={val.id}
+                        description={val.description}
+                        image={val.photo}
+                        title={val.name}
+                        price={val.price}
+                        id={val.id}
+                        quantity={val.quantity}
+                      />
+                    )
+                  })
+                ) : (
+                  <p className="null" >Carrinho Vazio...</p>
+                )}
               </Cards>
               <FinalValue>
                 <p>Total:</p>
